@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/admin/Downloads/privacy-policy.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XunAuto 隐私政策</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 24px; color: #1a1a1a; line-height: 1.8; background: #fafafa; }
+    h1 { font-size: 22px; margin-bottom: 8px; color: #000; }
+    .updated { font-size: 13px; color: #888; margin-bottom: 32px; }
+    h2 { font-size: 16px; margin: 28px 0 12px; color: #222; border-left: 3px solid #bdff00; padding-left: 12px; }
+    p { margin-bottom: 14px; font-size: 14px; color: #333; }
+    ul { margin: 0 0 14px 20px; font-size: 14px; color: #333; }
+    li { margin-bottom: 6px; }
+    .highlight { background: #f5f5f5; padding: 14px 18px; border-radius: 8px; font-size: 13px; color: #555; margin-bottom: 14px; }
+    a { color: #4a90d9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-size: 12px; color: #999; text-align: center; }
+  </style>
+</head>
+<body>
+
+<h1>XunAuto 隐私政策</h1>
+<p class="updated">最后更新：2026 年 5 月 27 日</p>
+
+<h2>概述</h2>
+<p>XunAuto 是一款 Chrome 浏览器扩展，用于在 NovelAI 网页（novelai.net）上自动化批量生成图片。我们尊重您的隐私。本政策说明扩展收集、使用和保护的数据。除授权验证外，扩展的所有功能均在您的浏览器本地运行。</p>
+
+<h2>我们收集的数据</h2>
+<p>扩展收集的数据如下：</p>
+<ul>
+  <li><strong>激活码</strong>：您输入的激活码，用于验证您是否拥有有效使用权限，存储在浏览器本地（chrome.storage.local）。</li>
+  <li><strong>设备指纹</strong>：由您浏览器的环境信息生成的一段不可逆哈希值，用于防止同一激活码被多台设备共用。生成指纹所使用的信息包括：User-Agent、CPU 逻辑核心数、屏幕分辨率与色深、时区、浏览器语言、操作系统平台，以及一段由 Canvas 绘图生成的特征值（Canvas 指纹）。这些信息经哈希运算后仅保留结果值，<strong>无法被还原为上述原始信息，也无法用于识别您的真实身份</strong>。</li>
+  <li><strong>提示词列表</strong>：您手动输入或导入的提示词，仅存储在浏览器本地，不会上传到任何服务器。</li>
+  <li><strong>运行进度</strong>：批量生成的进度信息，仅存储在浏览器本地。</li>
+</ul>
+
+<h2>我们不收集的数据</h2>
+<div class="highlight">
+  我们<strong>不会</strong>收集您的 NovelAI 账号信息、密码、生成的图片内容、浏览历史、IP 地址，或任何其他可识别您个人身份的数据。
+</div>
+
+<h2>数据的使用方式</h2>
+<ul>
+  <li>激活码与设备指纹仅用于授权验证，会通过加密连接发送至我们的验证服务器进行校验。</li>
+  <li>提示词与运行进度仅在浏览器本地使用，用于实现扩展的批量生成功能。</li>
+  <li>生成的图片通过浏览器原生下载功能直接保存到您的设备，不会经由我们的服务器。</li>
+</ul>
+
+<h2>扩展权限说明</h2>
+<p>扩展申请的浏览器权限及其用途如下：</p>
+<ul>
+  <li><strong>activeTab / scripting</strong>：用于在 NovelAI 页面注入脚本，实现自动填写提示词与点击生成。</li>
+  <li><strong>downloads</strong>：用于将生成的图片保存到您的设备。</li>
+  <li><strong>storage</strong>：用于在本地保存激活码、提示词列表和运行进度。</li>
+  <li><strong>主机权限（novelai.net）</strong>：扩展功能仅在 NovelAI 网站上运行。</li>
+  <li><strong>主机权限（验证服务器域名）</strong>：用于与授权验证服务器通信。</li>
+</ul>
+
+<h2>数据存储与传输</h2>
+<ul>
+  <li>所有本地数据存储在 chrome.storage.local，不会同步到其他设备或上传至云端。</li>
+  <li>与验证服务器之间的通信均使用 HTTPS 加密传输。</li>
+  <li>验证服务器仅存储激活码与对应设备指纹的关联关系，用于授权校验，不存储其他个人数据。</li>
+</ul>
+
+<h2>第三方服务</h2>
+<p>扩展不集成任何第三方分析、广告或追踪服务。扩展仅与以下两方通信：您正在使用的 NovelAI 网站，以及我们用于授权验证的服务器。</p>
+
+<h2>数据删除</h2>
+<p>您可以随时通过以下方式删除所有本地数据：</p>
+<ul>
+  <li>在扩展中点击"退出"取消激活，扩展会清除本地存储的激活码与相关数据。</li>
+  <li>在 Chrome 扩展管理页面移除 XunAuto 扩展，所有本地数据将随之删除。</li>
+</ul>
+
+<h2>政策变更</h2>
+<p>我们可能会更新本隐私政策。重大变更将通过扩展更新说明或本页面告知您。继续使用扩展即表示您同意更新后的政策。</p>
+
+<h2>联系我们</h2>
+<p>如有任何隐私相关问题，欢迎通过以下邮箱与我们联系：</p>
+<p><a href="mailto:miouxun@gmail.com">miouxun@gmail.com</a></p>
+
+<footer>© 2026 XunAuto. All rights reserved.</footer>
+
+
+
+</body></html>
